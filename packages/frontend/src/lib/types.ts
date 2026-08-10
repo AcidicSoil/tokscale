@@ -44,6 +44,7 @@ export const SUPPORTED_CLIENT_TYPES = [
   "augment",
   "kimchi",
   "reasonix",
+  "serena",
 ] as const;
 
 export type CcMirrorClientType = `cc-mirror/${string}`;
