@@ -72,6 +72,7 @@ export const SOURCE_DISPLAY_NAMES: Record<ClientType, string> = {
   augment: "Augment Code",
   kimchi: "Kimchi",
   reasonix: "Reasonix",
+  serena: "Serena",
 };
 
 // Client logos from GitHub CDN (public repo)
@@ -127,6 +128,7 @@ export const SOURCE_LOGOS: Record<ClientType, string> = {
   augment: "https://github.com/augmentcode.png",
   kimchi: "https://github.com/getkimchi.png",
   reasonix: `${GITHUB_CDN_BASE}/client-synthetic.png`,
+  serena: "https://github.com/oraios.png",
 };
 
 export const SOURCE_COLORS: Record<ClientType, string> = {
@@ -175,6 +177,7 @@ export const SOURCE_COLORS: Record<ClientType, string> = {
   augment: "#9333EA",
   kimchi: "#14B8A6",
   reasonix: "#6366F1",
+  serena: "#CB7F33",
 };
 
 // Derived values
