@@ -100,6 +100,16 @@ describe("frontend client registry", () => {
     expect(result.errors).toEqual([]);
   });
 
+  it("accepts Serena submissions as an externally attributed client", () => {
+    // Serena is an MCP/tool layer rather than an authoritative model-usage
+    // ledger. Host integrations may stamp correlated usage with client="serena"
+    // while preserving the upstream provider/model token counts.
+    const result = validateSubmission(payloadForClient("serena"));
+
+    expect(result.valid).toBe(true);
+    expect(result.errors).toEqual([]);
+  });
+
   it("accepts every core client id in submission validation", () => {
     const rejected = coreClientIds().filter((client) => {
       const result = validateSubmission(payloadForClient(client));
